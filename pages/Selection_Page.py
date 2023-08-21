@@ -26,6 +26,6 @@ class SelectionPage:
     def select_category(self):
         category_element = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "[alt='קטגוריה']")))
         category_element.click()
-        category_values = self.wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "[value='358']")))
+        category_values = self.wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "[value='438']")))
         category_values[1].click()
 
