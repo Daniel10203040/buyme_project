@@ -35,8 +35,24 @@ By.XPATH, '//span[@class="text-link theme" and @aria-label="להרשמה" and @r
 
         # Submit the registration form
         Submit1 = WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "ember1948")))
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "button[type=submit]")))
         Submit1.click()
 
-        # Add a sleep for demonstration purposes (consider using waits)
+
         time.sleep(3)
+
+
+    def login(self,email,password):
+        self.wait.until(EC.element_to_be_clickable(self.press_to_register)).click()
+        time.sleep(5)
+        elements_with_placeholder = self.driver.find_elements(*self.elements_with_placeholder)
+        elements_with_placeholder[0].send_keys(email)
+        elements_with_placeholder[1].send_keys(password)
+
+        Submit1 = WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "button[type=submit]")))
+        Submit1.click()
+
+        time.sleep(10)
+
+
