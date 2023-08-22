@@ -33,7 +33,7 @@ class TestBuyMe:
         wait = WebDriverWait(driver,20)
         login = LoginPage(driver,wait)
         driver.get("https://buyme.co.il/")
-        login.login("danielsh741@gmail.com","Daniel123")
+        login.login("danielsh741@gmail.com","Daniel102030")
 
         selection_page = SelectionPage(driver, wait)
         selection_page.select_sum()
@@ -68,7 +68,7 @@ class TestBuyMe:
         wait = WebDriverWait(driver,20)
         login = LoginPage(driver,wait)
         driver.get("https://buyme.co.il/")
-        login.login("danielsh741@gmail.com","Daniel123")
+        login.login("danielsh741@gmail.com","Daniel102030")
 
 
         pick_bussiness_page = PickBuisness(driver, wait)
@@ -79,7 +79,7 @@ class TestBuyMe:
         wait = WebDriverWait(driver, 20)
         login = LoginPage(driver, wait)
         driver.get("https://buyme.co.il/")
-        login.login("danielsh741@gmail.com", "Daniel123")
+        login.login("danielsh741@gmail.com", "Daniel102030")
 
         time.sleep(10)
         selection_page = SelectionPage(driver, wait)
