@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 
+
 class LoginPage:
     def __init__(self, driver, wait):
         self.driver = driver
@@ -55,4 +56,15 @@ By.XPATH, '//span[@class="text-link theme" and @aria-label="להרשמה" and @r
 
         time.sleep(10)
 
+    def pick_buisness(self,price):
+        self.wait.until(EC.element_to_be_clickable(self.press_to_register)).click()
+        time.sleep(5)
+        elements_with_placeholder = self.driver.find_elements(*self.elements_with_placeholder)
+
+
+        Submit1 = WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "button[type=submit]")))
+        Submit1.click()
+
+        time.sleep(10)
 
